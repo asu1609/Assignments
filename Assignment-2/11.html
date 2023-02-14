@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternate Caps</title>
+</head>
+<body>
+    <label for="">Enter the string</label>
+    <input type="text" id="string">
+    <button onclick="altcaps()">Alternate Caps</button>
+    <script>
+        function altcaps(){
+            let str = document.getElementById('string').value;
+            let i=0;
+            let flag = 1;
+            while(i<str.length){
+                if(str[i] != " "){
+                    if(flag == 1){
+                        document.write(str[i].toUpperCase());
+                        flag = 0;
+                    }
+                else{
+                        document.write(str[i].toLowerCase());
+                        flag=1;
+                    }
+                }
+                else{
+                        document.write(str[i]);
+                    }
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>

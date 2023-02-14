@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize first letter</title>
+</head>
+<body>
+    <label for="">Enter the string</label>
+    <input type="text" id="string">
+    <button onclick="captialize()">Captialize</button>
+    <script>
+        function captialize(){
+            let str = document.getElementById('string').value;
+            document.write(str[0].toUpperCase());
+            for(let i=1 ; i<str.length ; i++){
+                if(str[i] == ' '){
+                    document.write(str[i]);
+                    document.write(str[i+1].toUpperCase());
+                    i++;
+                }
+                else{
+                    document.write(str[i]);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

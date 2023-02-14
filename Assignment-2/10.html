@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomize the string</title>
+</head>
+<body>
+    <h1>Randomize string</h1>
+    <label for="">Enter the string:</label>
+    <input type="text" id="string">
+    <button onclick="randomize()">Randomize</button>
+    <script>
+        function randomize(){
+            let str = document.getElementById('string').value;
+            let random = "";
+            let i=0;
+            while(i<str.length){
+                random[i] = str[Math.floor(Math.random()*str.length)];
+                console.log(str[Math.floor(Math.random()*str.length)])
+                i++;
+            }
+            console.log(random);
+        }
+    </script>
+</body>
+</html>
