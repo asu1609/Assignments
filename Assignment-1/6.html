@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h1>String start with java</h1>
+    <label for="">Enter the string:</label>
+    <input type="text" id = 'str'>
+    <button onclick="check()">Check</button>
+    <h3 id="dis"></h3>
+    <script>
+        function check(){
+            var a = document.getElementById('str').value.toLowerCase();
+            var n = a.indexOf('java');
+            let d = document.getElementById('dis');
+            if(n == 0){
+                d.innerHTML = "True";
+            }
+            else{
+                d.innerHTML = "False";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive or Negative</title>
+</head>
+<body>
+    <h1>Check whether the number is Positive or Negative</h1>
+    <label for="">Enter the number: </label>
+    <input type="number" name="" id="number">
+    <button onclick="check()">Check</button>
+    <h3 id="ans"></h3>
+    <script> 
+        function check(){
+            var n = document.getElementById('number').value;
+            var a = document.getElementById('ans');
+            console.log(n);
+            if(n ===""){
+                alert("Enter the number");
+            }
+            else if(n > 0){
+                a.innerHTML = `${n} is Positive.`;
+            }
+            else if(n < 0){
+                a.innerHTML = `${n} is Negative.`;
+            }
+            else{
+                a.innerHTML = `${n} is zero.`;
+            }
+        }
+    </script>
+</body>
+</html>

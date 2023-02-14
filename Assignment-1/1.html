@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check number 0 or not</title>
+</head>
+<body>
+    <h1>Check one of the number is 50 or not or sum of the numbers is 50 or not</h1>
+    Enter first number: 
+    <input type="number" id="first" required>
+    <br><br>
+    Enter second number:
+    <input type="number" name="" id="second" required>
+    <button onclick="check()">Get Answer</button>
+    <h4 id="ans"></h4>
+    <script>
+        var a,b;
+        function check (){
+            a = document.getElementById('first').value;
+            b = document.getElementById('second').value;
+            var display = document.getElementById('ans');
+            if(a == "" || b == ""){
+                alert("Enter the number");
+            }
+            else if(Number(a) == 50 || Number(b) == 50 || ((Number(a)+Number(b)) == 50)){
+                display.innerHTML = "True";
+            }
+            else {
+                display.innerHTML = "False";
+            }
+        }
+    </script>
+</body>
+</html>

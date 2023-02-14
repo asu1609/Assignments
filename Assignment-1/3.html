@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <label for="">Enter the string:</label>
+    <input type="text" id="str">
+    <button onclick="display()">Display</button>
+    <h3 id="ans"></h3>
+    <script>
+        function display(){
+            var str = document.getElementById('str').value;
+            var a = document.getElementById('ans');
+            if(str[0].toLowerCase() == 'p' && str[1].toLowerCase() == 'y'){
+                a.innerHTML = str;
+            }
+            else{
+                a.innerHTML = 'Py' + str ;
+            }
+        }
+    </script>
+</body>
+</html>

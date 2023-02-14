@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larger number</title>
+</head>
+<body>
+    <h1>Display longest Number</h1>
+    <label for="">Enter the first number:</label>
+    <input type="number" id = 'first'>
+    <br><br>
+    <label for="">Enter the second number:</label>
+    <input type="number" id = 'second'>
+    <button onclick="display()">Display</button>
+    <h3 id="dis"></h3>
+    <script>
+        function display(){
+            var num1 = document.getElementById('first').value;
+            var num2 = document.getElementById('second').value;
+            var ans = document.getElementById('dis');
+            ans.innerHTML = `The largest number is ${Math.max(num1,num2)}.`;
+        }
+    </script>
+</body>
+</html>
