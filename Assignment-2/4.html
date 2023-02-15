@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeating Character</title>
+</head>
+<body>
+    <h1>Repeating characters</h1>
+    <label for="">Enter the string:</label>
+    <input type="text" name="" id="string">
+    <br><br>
+    <label for="">Enter the number of repeating characters you want:</label>
+    <input type="number" name="" id="number">
+    <button onclick="find()">Find</button>
+    <p id="ans"></p>
+    <script>
+        function find(){
+            let str = document.getElementById('string').value;
+            let num = document.getElementById('number').value;
+            let stra = str.split('');
+            let char = {};
+            let ans = [];
+            for(let i=0 ; i<stra.length ; i++){
+                if(char[stra[i]] != undefined){
+                    char[stra[i]]++;
+                }
+                else{
+                    char[stra[i]] = 1;
+                }
+            }
+            for(let key in char){
+                if(char[key] == Number(num)){
+                    ans.push(key);
+                }
+            }
+            //console.log(char);
+            let a = document.getElementById('ans');
+            a.innerHTML = `The ${num} repeating characters are ${ans}`;
+        }
+    </script>
+</body>
+</html>

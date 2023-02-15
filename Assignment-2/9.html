@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the substring</title>
+</head>
+<body>
+    <h1>Find the substring</h1>
+    <label for="">Enter the string:</label>
+    <input type="text" id="string">
+    <br><br>
+    <label for="">Enter the substring:</label>
+    <input type="text" id="substring">
+    <button onclick="find()">Find</button>
+    <p id="ans"></p>
+    <script>
+        function find(){
+            let str = document.getElementById('string').value;
+            let substr = document.getElementById('substring').value;
+            let ans = document.getElementById('ans');
+            let flags = [];
+            let flag = 0;
+            for(let i=0 ; i<str.length ; i++){
+                flag = 0;
+                for(let j=0 ; j<substr.length ; j++){
+                    if(substr[j] == str[j+i]){
+                        flag++;
+                    }
+                }
+                flags[i] = flag;
+            }
+            i=0;
+            console.log(flags);
+            while(i<flags.length){
+                if(flags[i] == substr.length){
+                    ans.innerHTML = 'True';
+                    i = flags.length;
+                }
+                else{
+                    ans.innerHTML = 'False';
+                    i++;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

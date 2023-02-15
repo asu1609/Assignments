@@ -11,18 +11,30 @@
     <label for="">Enter the string:</label>
     <input type="text" id="string">
     <button onclick="randomize()">Randomize</button>
+    <p id="display"></p>
     <script>
         function randomize(){
-            let str = document.getElementById('string').value;
-            let random = "";
-            let i=0;
-            while(i<str.length){
-                random[i] = str[Math.floor(Math.random()*str.length)];
-                console.log(str[Math.floor(Math.random()*str.length)])
-                i++;
+            let str = document.getElementById('string').value.split("");
+            let random = [];
+            let index = getrandomIndex(str.length);
+            for(let i in index){
+                random[i] = str[index[i]];
             }
-            console.log(random);
+            let d = document.getElementById('display');
+            d.innerHTML = `The randomize string is ${random.join("")}`;
         }
+        function getrandomIndex(max){
+        let index = []; 
+        let n;
+        while(index.length<max){
+            n = Math.floor(Math.random()*max);
+            if(index.indexOf(n) == -1){
+                index.push(n);
+            }
+        }
+    return index;
+}
+
     </script>
 </body>
 </html>
